@@ -4,7 +4,9 @@
   "description": "Building a login auth with react",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --use_strict index.js",
+    "bundle": "webpack"
   },
   "author": "Corey S Lewis",
   "license": "MIT",

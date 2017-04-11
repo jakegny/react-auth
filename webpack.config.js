@@ -3,7 +3,7 @@ const path = require('path');
 
 module.exports = {
   
-  entry: path.join(__dirname, '/client/src/app.jsx'),
+  entry: path.join(__dirname, '/client/src/App.jsx'),
 
   output: {
     path: path.join(__dirname, '/client/dist/js'),
@@ -15,7 +15,7 @@ module.exports = {
     loaders: [{
       test: /\.jsx?$/,
       include: path.join(__dirname, '/client/src'),
-      loader: 'babel',
+      loader: 'babel-loader',
       query: {
         presets: ["react", "es2015"]
       }
