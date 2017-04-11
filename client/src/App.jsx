@@ -1,4 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import HomePage from './components/HomePage.jsx'
 
-ReactDOM.render(<h1>Output from App, it's working</h1>, document.getElementById('react-app'));
+ReactDOM.render(<HomePage />, document.getElementById('react-app'));
