@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import { Link, IndexLink } from 'react-router-dom';
 
 
-const Base = ({ children }) => (
+const Base = ({children}) => (
   <div>
       
     <div className="top-bar">

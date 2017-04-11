@@ -14116,9 +14116,21 @@ var _MuiThemeProvider = __webpack_require__(55);
 
 var _MuiThemeProvider2 = _interopRequireDefault(_MuiThemeProvider);
 
-var _routes = __webpack_require__(456);
+var _Base = __webpack_require__(175);
 
-var _routes2 = _interopRequireDefault(_routes);
+var _Base2 = _interopRequireDefault(_Base);
+
+var _HomePage = __webpack_require__(176);
+
+var _HomePage2 = _interopRequireDefault(_HomePage);
+
+var _LoginPage = __webpack_require__(177);
+
+var _LoginPage2 = _interopRequireDefault(_LoginPage);
+
+var _SignUpPage = __webpack_require__(178);
+
+var _SignUpPage2 = _interopRequireDefault(_SignUpPage);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -14126,9 +14138,19 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 (0, _reactTapEventPlugin2.default)();
 
 _reactDom2.default.render(_react2.default.createElement(
-  _MuiThemeProvider2.default,
-  { muiTheme: (0, _getMuiTheme2.default)() },
-  _react2.default.createElement(_reactRouterDom.BrowserRouter, { routes: _routes2.default })
+    _MuiThemeProvider2.default,
+    { muiTheme: (0, _getMuiTheme2.default)() },
+    _react2.default.createElement(
+        _reactRouterDom.BrowserRouter,
+        null,
+        _react2.default.createElement(
+            _reactRouterDom.Route,
+            { component: _Base2.default },
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/', component: _HomePage2.default }),
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/login', component: _LoginPage2.default }),
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/signup', component: _SignUpPage2.default })
+        )
+    )
 ), document.getElementById('react-app'));
 
 /***/ }),
@@ -42566,51 +42588,6 @@ var withRouter = function withRouter(Component) {
 };
 
 /* harmony default export */ __webpack_exports__["a"] = (withRouter);
-
-/***/ }),
-/* 456 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _Base = __webpack_require__(175);
-
-var _Base2 = _interopRequireDefault(_Base);
-
-var _HomePage = __webpack_require__(176);
-
-var _HomePage2 = _interopRequireDefault(_HomePage);
-
-var _LoginPage = __webpack_require__(177);
-
-var _LoginPage2 = _interopRequireDefault(_LoginPage);
-
-var _SignUpPage = __webpack_require__(178);
-
-var _SignUpPage2 = _interopRequireDefault(_SignUpPage);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var routes = {
-  component: _Base2.default,
-  childRoutes: [{
-    path: '/',
-    component: _HomePage2.default
-  }, {
-    path: '/login',
-    component: _LoginPage2.default
-  }, {
-    path: '/signup',
-    component: _SignUpPage2.default
-  }]
-};
-
-exports.default = routes;
 
 /***/ })
 /******/ ]);
