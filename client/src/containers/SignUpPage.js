@@ -1,9 +1,7 @@
 import React, { PropTypes, Component } from 'react';
-import SignUpForm from '../components/SignUpForm.jsx';
-
+import SignUpForm from '../components/SignUpForm';
 
 class SignUpPage extends Component {
-
   constructor(props) {
     super(props);
 
@@ -41,6 +39,7 @@ class SignUpPage extends Component {
   render() {
     return (
       <SignUpForm
+        history={this.props.history}
         onSubmit={this.processForm}
         onChange={this.changeUser}
         errors={this.state.errors}
@@ -48,7 +47,6 @@ class SignUpPage extends Component {
       />
     );
   }
-
 }
 
 export default SignUpPage;

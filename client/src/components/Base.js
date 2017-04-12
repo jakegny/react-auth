@@ -1,10 +1,9 @@
 import React, { PropTypes } from 'react';
 import { Link, IndexLink } from 'react-router-dom';
 
-
-const Base = ({children}) => (
+const Base = ({ children }) => (
   <div>
-      
+
     <div className="top-bar">
       <div className="top-bar-left">
         <IndexLink to="/">React App</IndexLink>

@@ -1,12 +1,9 @@
 import React, { PropTypes } from 'react';
-import LoginForm from '../components/LoginForm.jsx';
-
+import LoginForm from '../components/LoginForm';
 
 class LoginPage extends React.Component {
-
   constructor(props) {
     super(props);
-
 
     this.state = {
       errors: {},
@@ -20,7 +17,6 @@ class LoginPage extends React.Component {
     this.changeUser = this.changeUser.bind(this);
   }
 
-
   processForm(event) {
     // prevent default action. in this case, action is the form submission event
     event.preventDefault();
@@ -28,7 +24,6 @@ class LoginPage extends React.Component {
     console.log('email:', this.state.user.email);
     console.log('password:', this.state.user.password);
   }
-
 
   changeUser(event) {
     const field = event.target.name;
@@ -41,8 +36,11 @@ class LoginPage extends React.Component {
   }
 
   render() {
+    console.log('this', this);
+
     return (
       <LoginForm
+        history={this.props.history}
         onSubmit={this.processForm}
         onChange={this.changeUser}
         errors={this.state.errors}
@@ -50,7 +48,6 @@ class LoginPage extends React.Component {
       />
     );
   }
-
 }
 
 export default LoginPage;
